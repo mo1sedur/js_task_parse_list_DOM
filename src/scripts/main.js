@@ -19,9 +19,9 @@ function getEmployees(list) {
   
   return items.map(item => ({
     name: item.textContent.trim(),
-    position: item.dataset.position,
+    position: Number(item.dataset.position),
     salary: getSalary(item),
-    age: item.dataset.age,
+    age: Number(item.dataset.age),
   }));
 }
 
