@@ -3,7 +3,9 @@
 const list = document.querySelector('ul');
 
 function getSalary(item) {
-  return Number(item.dataset.salary);
+  const cleaned = item.dataset.salary.replace(/[^0-9.]/g, '');
+  
+  return parseFloat(cleaned);
 }
 
 function sortList(listok) {
