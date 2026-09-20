@@ -11,7 +11,7 @@ function sortList(listok) {
 
     const sorted = items.sort((a, b) => getSalary(b) - getSalary(a));
 
-    list.append(...sorted);
+    listok.append(...sorted);
 }
 
 function getEmployees(listok) {
@@ -19,7 +19,7 @@ function getEmployees(listok) {
   
   return items.map(item => ({
     name: item.textContent.trim(),
-    position: Number(item.dataset.position),
+    position: item.dataset.position,
     salary: getSalary(item),
     age: Number(item.dataset.age),
   }));
